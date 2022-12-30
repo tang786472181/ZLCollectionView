@@ -33,11 +33,6 @@
     if (!self.isNeedReCalculateAllLayout) {
         return;
     }
-
-    // collectionView 可能还没有添加到parent
-    if (CGRectIsNull(self.collectionView.frame) || CGRectIsEmpty(self.collectionView.frame)) {
-        return;
-    }
     
     CGFloat totalWidth = self.collectionView.frame.size.width;
     CGFloat x = 0;
@@ -200,7 +195,9 @@
                             }
                             CGFloat itemX = edgeInsets.left + (itemWidth+minimumInteritemSpacing)*column;
                             CGFloat itemY = columnHeight[column];
-                            attributes.frame = CGRectMake(itemX, itemY, itemWidth, itemSize.height);
+                            CGFloat width = itemWidth > 0 ? itemWidth : itemSize.width;
+                            attributes.hidden = itemWidth < 0;
+                            attributes.frame = CGRectMake(itemX, itemY, width, itemSize.height);
                             columnHeight[column] += (itemSize.height + minimumLineSpacing);
                         }
                     }
