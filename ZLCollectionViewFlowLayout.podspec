@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.author       = { "czl0325" => "295183917@qq.com" }
   s.platform     = :ios, "7.0"
 
-  s.source       = { :git => "https://github.com/czl0325/ZLCollectionView.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/tang786472181/ZLCollectionView.git", :tag => s.version }
   
   #s.ios.deployment_target = '8.0'
   s.source_files  = "ZLCollectionViewFlowLayout/*.{h,m}"
