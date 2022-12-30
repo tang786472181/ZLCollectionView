@@ -33,6 +33,11 @@
     if (!self.isNeedReCalculateAllLayout) {
         return;
     }
+
+    // collectionView 可能还没有添加到parent
+    if (CGRectIsNull(self.collectionView.frame) || CGRectIsEmpty(self.collectionView.frame)) {
+        return;
+    }
     
     CGFloat totalWidth = self.collectionView.frame.size.width;
     CGFloat x = 0;
