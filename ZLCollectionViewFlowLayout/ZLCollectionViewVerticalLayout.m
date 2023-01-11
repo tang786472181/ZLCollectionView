@@ -27,7 +27,10 @@
 }
 
 - (void)invalidateLayout {
-    [self.attributesArray removeAllObjects];
+    if (@available(iOS 13, *)) {
+    } else {
+        [self.attributesArray removeAllObjects];
+    }
     [super invalidateLayout];
 }
 
