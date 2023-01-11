@@ -26,6 +26,11 @@
     return self;
 }
 
+- (void)invalidateLayout {
+    [self.attributesArray removeAllObjects];
+    [super invalidateLayout];
+}
+
 - (void)prepareLayout {
     [super prepareLayout];
     
