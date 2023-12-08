@@ -40,10 +40,10 @@ typedef enum {
 - (UIImage*)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout backImageForSection:(NSInteger)section;
 
 //自定义每个section的背景view，需要继承UICollectionReusableView(如要调用方法传递参数需要继承ZLCollectionBaseDecorationView)，返回类名
-- (NSString*)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout registerBackView:(NSInteger)section;
+- (nullable NSString*)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout registerBackView:(NSInteger)section;
 
 //向每个section自定义背景view传递自定义方法 eventName:方法名（注意带参数的方法名必须末尾加:）,parameter:参数
-- (ZLBaseEventModel*)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout backgroundViewMethodForSection:(NSInteger)section;
+- (nullable ZLBaseEventModel*)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout backgroundViewMethodForSection:(NSInteger)section;
 
 //背景是否延伸覆盖到headerView，默认为NO
 - (BOOL)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout attachToTop:(NSInteger)section;

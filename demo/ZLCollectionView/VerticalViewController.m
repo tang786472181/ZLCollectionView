@@ -493,7 +493,7 @@ singleColumnCountOfIndexPath:(NSIndexPath*)indexPath {
     return nil;
 }
 
-- (ZLBaseEventModel*)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout backgroundViewMethodForSection:(NSInteger)section {
+- (nullable ZLBaseEventModel*)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewFlowLayout *)collectionViewLayout backgroundViewMethodForSection:(NSInteger)section {
     if (section == 0 || section == 4) {
         return nil;
     } else if (section == 5) {
